@@ -182,9 +182,3 @@ A top dielectric layer of **Si3N4** is deposited to protect the chip.
 The metal layers bring out the **Source (S), Gate (G) and Drain (D)** terminals of both transistors. This completes the fabrication of the CMOS pair.
 
 <img width="900" alt="Final device with S, G, D terminals" src="images/19.png" />
-
----
-
-## Keywords
-
-`LOCOS` `bird's beak` `N-well` `P-well` `gate oxide` `polysilicon` `LDD` `spacer` `source/drain implant` `silicide` `CMP` `plug` `via` `passivation`
