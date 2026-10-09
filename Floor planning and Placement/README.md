@@ -1,7 +1,5 @@
 # CMOS Inverter Layout and Timing Characterization
 
-This README documents the CMOS inverter work shown in the supplied screenshots. The images are kept in their original numbered sequence and are referenced from `Pictures/`, so each explanation appears beside the relevant screenshot. The timing calculations below use the cursor readouts visible in the supplied ZIP images (not screenshots numbered 56–59 from the earlier draft).
-
 ## Contents
 
 1. [Design and layout exploration](#1-design-and-layout-exploration)
@@ -13,7 +11,7 @@ This README documents the CMOS inverter work shown in the supplied screenshots. 
 
 ## 1. Design and layout exploration
 
-The first screenshots show the terminal-based setup and the layout editor used to inspect the inverter and its physical layers. The figures below are grouped in the order shown in the archive; the captions describe only what can be supported from the visible screenshots.
+These show the setup and the magic layout view of the picorv32a. 
 
 ### 1.1 Setup and initial layout inspection
 
@@ -23,109 +21,96 @@ The terminal shows the initial setup commands for the standard-cell design envir
 
 ![Screenshot 2 — setup output](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/2.png)
 
-The terminal output continues the setup and environment checks.
+The terminal output 
 
 ![Screenshot 3 — file or directory listing](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/3.png)
 
-A directory listing is used to inspect the available design files.
-
 ![Screenshot 4 — file listing](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/4.png)
-
-The file listing continues, helping locate the files used by the layout and simulation steps.
 
 ![Screenshot 5 — design preparation](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/5.png)
 
-The terminal shows additional preparation commands and output.
-
 ![Screenshot 6 — tabular output](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/6.png)
-
-A tabular terminal output is inspected as part of the design workflow.
 
 ![Screenshot 7 — terminal output](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/7.png)
 
-The terminal continues to show design-related output.
-
-### 1.2 Layout editor and inverter structure
+### 1.2 Magic Layout of picorv32a
 
 ![Screenshot 8 — layout overview](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/8.png)
 
-The layout editor is open with the design canvas visible.
+Cells in picorv32a
 
 ![Screenshot 9 — layout objects](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/9.png)
 
-The view is zoomed into the design objects in the layout editor.
+metal layer 3
 
 ![Screenshot 10 — layout inspection](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/10.png)
 
-The layout is inspected at a closer scale.
+metal layer 2
 
 ![Screenshot 11 — layout operation](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/11.png)
 
-A dialog and highlighted layout geometry show an edit or inspection operation.
+Decap and tap cells
 
 ![Screenshot 12 — layout view](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/12.png)
 
-The layout editor displays the geometry being examined.
+Diagonally equidistant Tap cells
 
 ![Screenshot 13 — repeated layout structures](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/13.png)
 
-The view shows repeated layout structures and their placement.
+Subcell instance 
 
 ![Screenshot 14 — geometry inspection](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/14.png)
 
-A closer view is used to inspect the geometry and alignment.
+screen shot of run_placement
 
 ![Screenshot 15 — terminal commands](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/15.png)
 
-The terminal shows commands related to the design workflow.
+Screenshots of floorplan def in magic
 
 ![Screenshot 16 — layout overview](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/16.png)
 
-The layout editor displays the overall cell geometry.
+Standard cells legally placed
 
 ![Screenshot 17 — layer and connectivity view](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/17.png)
 
-The view shows the design layers and labels used to inspect connectivity.
+Clone custom inverter standard cell design from github repository
 
 ![Screenshot 18 — terminal output](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/18.png)
 
-The terminal shows another stage of the design workflow.
+Screenshot of custom inverter layout in magic
 
 ![Screenshot 19 — inverter layout](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/19.png)
 
-The layout view shows the inverter structure, including the transistor regions and interconnect layers.
+NMOS and PMOS identified
 
 ![Screenshot 20 — inverter layout inspection](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/20.png)
-
-The inverter layout is shown with a measurement or inspection dialog open.
-
 ![Screenshot 21 — inverter geometry](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/21.png)
 
-The layout is inspected at a closer scale to examine the device geometry.
+Output Y connectivity to PMOS and NMOS drain verified
 
 ![Screenshot 22 — layout information](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/22.png)
 
-A dialog displays information associated with the selected layout geometry.
+PMOS source connectivity to VDD (here VPWR) verified.
 
 ![Screenshot 23 — supply and device regions](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/23.png)
 
-The view highlights the inverter structure and supply-related regions.
+NMOS source connectivity to VSS (here VGND) verified
 
 ![Screenshot 24 — layout inspection output](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/24.png)
 
-The layout editor displays additional information for the selected geometry.
+Deleting necessary layout part to see DRC error
 
 ![Screenshot 25 — power rail and device regions](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/25.png)
 
-The view highlights the power rail and the inverter's physical regions.
+Spice extraction of inverter in magic
 
 ![Screenshot 26 — terminal/editor transition](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/26.png)
 
-The terminal is used to continue the design workflow.
+Screenshot of tkcon window after running above commands
 
 ![Screenshot 27 — command or script view](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/27.png)
 
-A text editor or terminal view shows commands used in the workflow.
+Screenshot of created spice file
 
 ![Screenshot 28 — zoomed layout](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/28.png)
 
