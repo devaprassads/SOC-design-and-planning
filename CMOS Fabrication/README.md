@@ -1,6 +1,6 @@
 # 16-Mask CMOS Process Flow
 
-This repository documents the **step-by-step fabrication of a CMOS pair** (PMOS in an N-well and NMOS in a P-well) on a **P-substrate** using a **16-mask CMOS process**.
+This README shows the **step-by-step fabrication of a CMOS pair** (PMOS in an N-well and NMOS in a P-well) on a **P-substrate** using a **16-mask CMOS process**.
 
 The focus is on understanding **what happens at each stage**, from defining the active region and wells to forming the gate, source/drain, contacts, and multi-level metal interconnects.
 
