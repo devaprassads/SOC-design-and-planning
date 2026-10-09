@@ -1,4 +1,4 @@
-# Physical Design Notes: Clock Tree, Timing Analysis and Routing
+# Clock Tree, Timing Analysis and Routing
 
 This explains the **physical design** part of making a chip (the steps after the logic is designed). It mainly covers:
 
