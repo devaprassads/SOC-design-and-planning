@@ -95,7 +95,7 @@ Results from synthesis, placement, CTS, and routing can differ, so each value sh
 
 ## What I Learned
 
-Through this project, I worked through the main steps of a digital physical-design flow. I explored CMOS fabrication, created and checked an inverter cell, reviewed synthesis outputs, and followed the design through floorplanning, placement, CTS, routing, and timing analysis. The repository keeps the files, screenshots, and reports for these steps together.
+Through this project, I worked through the main steps of a digital physical-design flow. I explored CMOS fabrication, altered and checked an inverter cell, reviewed synthesis outputs, and followed the design through floorplanning, placement, CTS, routing, and timing analysis. The repository keeps the files, screenshots, and reports for these steps together.
 
 ## Repository
 
