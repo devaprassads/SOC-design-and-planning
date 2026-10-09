@@ -1,1 +1,0 @@
-# SOC-design-and-planning
