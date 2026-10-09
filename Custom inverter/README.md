@@ -1,6 +1,6 @@
 # Topic 3: Custom Library Cell Design and SPICE Characterization
 
-This part of the project focuses on designing a CMOS inverter from scratch and preparing it for use in a digital chip design. The layout is created in **Magic** using the **130 nm process**, checked with DRC, and then used for circuit simulation and library generation.
+This part of the project focuses on designing a CMOS inverter and preparing it for use in a digital chip design. The layout is created in **Magic** using the **130 nm process**, checked with DRC, and then used for circuit simulation and library generation.
 
 The main aim is to understand how a standard cell is designed, tested, and represented so that physical-design tools can use it.
 
