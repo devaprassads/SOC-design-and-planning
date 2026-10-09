@@ -1,6 +1,6 @@
 # Physical Design Notes: Clock Tree, Timing Analysis and Routing
 
-These are my notes on the **physical design** part of making a chip (the steps after the logic is designed and before the chip is sent for manufacturing). It mainly covers:
+This explains the **physical design** part of making a chip (the steps after the logic is designed). It mainly covers:
 
 1. Timing analysis (setup and hold)
 2. Clock Tree Synthesis (CTS), including power aware CTS and crosstalk shielding
@@ -8,13 +8,11 @@ These are my notes on the **physical design** part of making a chip (the steps a
 4. The checks after routing (DRC and parasitics extraction)
 5. The power layout of a chip
 
-Each image is explained below. The sections follow the order that is easiest to understand.
-
 ---
 
 ## Table of Contents
 
-1. [Quick Terms](#quick-terms)
+1. [Key Terms](#Key-terms)
 2. [Timing Analysis with Ideal Clocks](#1-timing-analysis-with-ideal-clocks)
 3. [Clock Tree Synthesis (CTS)](#2-clock-tree-synthesis-cts)
 4. [Power Aware CTS](#3-power-aware-cts)
@@ -27,7 +25,7 @@ Each image is explained below. The sections follow the order that is easiest to 
 
 ---
 
-## Quick Terms
+## Key Terms
 
 | Term | Simple meaning |
 |---|---|
@@ -43,8 +41,6 @@ Each image is explained below. The sections follow the order that is easiest to 
 | Buffer | A cell that repeats a signal with more driving strength. |
 | Net | A wire connecting cells. |
 
-Unit conversions used below: **1 ns = 1000 ps**, so 10 ps = 0.01 ns.
-
 ---
 
 ## 1. Timing Analysis with Ideal Clocks
@@ -53,7 +49,7 @@ Unit conversions used below: **1 ns = 1000 ps**, so 10 ps = 0.01 ns.
 
 ![3](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/3.png)
 
-There are two flops, a **launch flop** and a **capture flop**, with some logic (the cloud) in between. Both get the same clock. "Ideal" means the clock reaches both flops at exactly the same time (no delay).
+There are two flops, a **launch flop** and a **capture flop**, with some logic in between. Both get the same clock. "Ideal" means the clock reaches both flops at exactly the same time (no delay).
 
 - Data leaves the launch flop at time `0` (clock edge).
 - The data takes time **θ (theta)** to travel through the logic.
