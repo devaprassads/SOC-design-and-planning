@@ -68,11 +68,6 @@ The formulas below are used to get the core and die size.
 
 ```
 Utilization = (Area occupied by netlist cells) / (Total core area)
-```
-
-So, rearranging:
-
-```
 Core Area = Netlist Area / Utilization
 ```
 
@@ -84,7 +79,7 @@ Aspect Ratio = Core Height / Core Width
 
 For a square core (aspect ratio = 1), width = height = sqrt(Core Area).
 
-### Worked example (sample numbers, only to show the method)
+### Worked example (sample numbers)
 
 Assume:
 - Netlist area = 100,000 µm²
@@ -114,11 +109,7 @@ Sites per row    = 447.2 / 0.46 ≈ 972 sites
 
 **Step 4: Die size**
 
-Die = Core + the margin around it (the margin is set by the tool/config), so the die is always a bit bigger than the core.
-
-> The numbers above are just an example to show how the calculation works. The actual values for this design come from the floorplan report in the tool.
-
----
+Die = Core + the margin around it (the margin is set by the config file), so the die is always a bit bigger than the core.
 
 ## 5. Macro and decap placement
 
@@ -146,33 +137,31 @@ After this the placement is legal and ready for the next step (clock tree synthe
 
 ## 7. Step-by-step visuals
 
-> Screenshots are numbered in the order they were taken. Each group below explains what that part of the flow shows.
-
 ### 7.1 Running the floorplan
 
 Here the floorplan step is launched from the flow. The tool reads the netlist and the config values (utilization, aspect ratio, etc.) and creates the die and core.
 
 ![Placement Step 25](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/25.png)
-**Step 25:** Floorplan command is started and the tool begins reading the netlist and config.
+Floorplan command is started and the tool begins reading the netlist and config.
 
 ![Placement Step 26](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/26.png)
-**Step 26:** Tool output showing the floorplan stages running one after another.
+ Tool output showing the floorplan stages running one after another.
 
 ![Placement Step 27](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/27.png)
-**Step 27:** Floorplan finishes. The die and core area are now defined.
+Floorplan finishes. The die and core area are now defined.
 
 ![Placement Step 28](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/28.png)
-**Step 28:** The floorplan output files (like the DEF file) are generated in the results folder.
+The floorplan output files (like the DEF file) are generated in the results folder.
 
 ### 7.2 Checking the floorplan
 
 The generated floorplan file is checked to confirm the die size, core size and rows match the calculations in section 4.
 
 ![Placement Step 29](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/29.png)
-**Step 29:** Opening the floorplan file to read the die area values.
+Opening the floorplan file to read the die area values.
 
 ![Placement Step 30](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/30.png)
-**Step 30:** Die dimensions are read from the file and converted to µm to compare with the expected size.
+Die dimensions are read from the file and converted to µm to compare with the expected size.
 
 ![Placement Step 31](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/31.png)
 **Step 31:** Launching Magic to see the floorplan visually.
