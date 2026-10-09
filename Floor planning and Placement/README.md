@@ -19,7 +19,7 @@ This part of the project explains how the synthesized design is prepared for phy
 
 ```text
 RTL -> Synthesis -> Floorplan -> Placement -> CTS -> Routing -> Signoff
-                      ^^^^^^^^^^^^^^^^^^^^^
+                    ^^^^^^^^^^^^^^^^^^^^^^
                       This part
 ```
 
@@ -29,7 +29,7 @@ Synthesis produces a **netlist**, which contains the logic cells and their conne
 
 ## Preparing the Flow
 
-Before starting floorplanning, I checked that the design files and synthesis results were available. These checks help make sure the flow is ready for the physical design stage.
+Before starting floorplanning, Check that the design files and synthesis results are available. These checks help make sure the flow is ready for the physical design stage.
 
 ![Directory Check](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/25.png)
 
@@ -162,7 +162,7 @@ During **detailed placement**, the tool adjusts the cells so that they do not ov
 
 ## Viewing the Placement Results
 
-I opened the placement result in Magic to check how the standard cells were arranged in the core.
+The placement result is opened in Magic to check how the standard cells are arranged in the core.
 
 ![Opening Magic for Placement](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/49.png)
 
