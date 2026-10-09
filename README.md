@@ -32,7 +32,7 @@ This section covers the custom CMOS inverter. It includes layout work, design-ru
 
 - [Open Custom Cell](./Custom%20Cell/)
 - [Read the section README](./Custom%20Cell/README.md)
-- [Browse custom-cell files](./Custom%20Cell/files/)
+- [Custom-cell files](./Custom%20Cell/files/)
 
 ### 3. Synthesis
 
@@ -40,8 +40,8 @@ This section covers the synthesis stage, where the RTL is converted into a gate-
 
 - [Open Synthesis](./synthesis/)
 - [Read the section README](./synthesis/README.md)
-- [Browse synthesis results](./results/synthesis/)
-- [Browse synthesis reports](./reports/synthesis/)
+- [Synthesis results](./results/synthesis/)
+- [Synthesis reports](./reports/synthesis/)
 
 ### 4. Floorplanning and Placement
 
@@ -49,9 +49,9 @@ This section covers the initial physical layout setup, floorplan creation, and p
 
 - [Open Floorplanning and Placement](./Floor%20planning%20and%20Placement/)
 - [Read the section README](./Floor%20planning%20and%20Placement/README.md)
-- [Browse floorplan results](./results/floorplan/)
-- [Browse placement results](./results/placement/)
-- [Browse floorplan reports](./reports/floorplan/)
+- [Floorplan results](./results/floorplan/)
+- [Placement results](./results/placement/)
+- [Floorplan reports](./reports/floorplan/)
 
 ### 5. CTS and Timing
 
@@ -66,7 +66,7 @@ Clock-tree synthesis builds the clock distribution network for the design. This 
 
 - [Open Clock Tree Synthesis](./Clock%20Tree%20synthesis/)
 - [Read the section README](./Clock%20Tree%20synthesis/README.md)
-- [Browse CTS results](./results/cts/)
+- [CTS results](./results/cts/)
 
 ### 7. Routing and Sign-off
 
@@ -74,8 +74,8 @@ This section covers the later physical-design steps, including power-distributio
 
 - [Open Routing](./Routing/)
 - [Read the section README](./Routing/README.md)
-- [Browse routing results](./results/routing/)
-- [Browse routing reports](./reports/routing/)
+- [Routing results](./results/routing/)
+- [Routing reports](./reports/routing/)
 
 ## Main Project Files
 
