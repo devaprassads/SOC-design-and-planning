@@ -106,19 +106,17 @@ Spice extraction of inverter in magic
 
 ![Screenshot 26 — terminal/editor transition](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/26.png)
 
-Screenshot of tkcon window after running above commands
+Screenshot of created spice file
 
 ![Screenshot 27 — command or script view](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/27.png)
 
-Screenshot of created spice file
+Measuring unit distance in layout grid
 
 ![Screenshot 28 — zoomed layout](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/28.png)
 
-The zoomed layout shows the device regions and interconnect geometry.
+Final edited spice file ready for ngspice simulation
 
 ![Screenshot 29 — simulation preparation](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/29.png)
-
-The terminal/editor view precedes the SPICE simulation steps.
 
 ---
 
