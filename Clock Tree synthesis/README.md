@@ -51,7 +51,7 @@ Unit conversions used below: **1 ns = 1000 ps**, so 10 ps = 0.01 ns.
 
 ### Setup analysis, single clock (ideal)
 
-![3](3.png)
+![3](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/3.png)
 
 There are two flops, a **launch flop** and a **capture flop**, with some logic (the cloud) in between. Both get the same clock. "Ideal" means the clock reaches both flops at exactly the same time (no delay).
 
@@ -82,7 +82,7 @@ So the logic delay must be less than 0.99 ns, otherwise the capture flop misses 
 
 ### Inside a flop (two muxes)
 
-![4](4.png)
+![4](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/4.png)
 
 This shows why setup time exists by looking inside a flop. A flop is made of **two muxes (Mux1 and Mux2)**, and each one is controlled by CLK.
 
@@ -97,7 +97,7 @@ So at the rising edge, whatever `D` was just before the edge gets locked in and 
 
 ### Clock skew
 
-![5](5.png)
+![5](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/5.png)
 
 CTS is step 4 in the flow. The clock comes in from the pin `CLK1` and has to reach all flops (here FF1 and FF2).
 
@@ -112,7 +112,7 @@ The goal of CTS is to keep skew close to **0 ps**, so all flops get the clock at
 
 ### Clock tree with buffering (before)
 
-![6](6.png)
+![6](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/6.png)
 
 The left side is the chip layout (floorplan) and the right side is the same circuit as a schematic. The chip has:
 
@@ -124,7 +124,7 @@ The coloured thick lines (yellow for CLK1, purple for CLK2) are the clock wires 
 
 ### Clock tree with buffering (after)
 
-![7](7.png)
+![7](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/7.png)
 
 Here **red buffers** (`Buf`) have been added along the clock wires. Buffers strengthen the signal and help balance the delay to every flop, so the skew gets smaller. Compared with the previous picture, the clock wires now go through several buffers before reaching each flop.
 
@@ -134,7 +134,7 @@ Here **red buffers** (`Buf`) have been added along the clock wires. Buffers stre
 
 ### Clock gating cells
 
-![1](1.png)
+![1](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/1.png)
 
 To save power, the clock can be switched off for parts of the chip that are not working. This is done with a gate on the clock, using an enable signal `EN`.
 
@@ -166,7 +166,7 @@ So AND gating is active when EN is 1 and OR gating is active when EN is 0.
 
 ### Delay tables and buffer tree
 
-![2](2.png)
+![2](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/2.png)
 
 **Top part: delay tables.** Each buffer type (CBUF 1 and CBUF 2) has a table. The delay of a buffer depends on two things:
 
@@ -198,7 +198,7 @@ Using these loads, the delay of each buffer can be picked from its table.
 
 ### What can go wrong with a glitch
 
-![8](8.png)
+![8](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/8.png)
 
 Two wires that run side by side have a small capacitance between them, called `CM` (coupling capacitance). If the top wire (red) switches, it can pull the neighbouring wire (victim, at point `V`) and cause a small unwanted pulse called a **glitch**.
 
@@ -206,7 +206,7 @@ In this example the glitch goes onto the `RST` (reset) wire going to a memory. A
 
 ### Impact of crosstalk on skew
 
-![10](10.png)
+![10](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/10.png)
 
 Crosstalk does not only make glitches, it can also change the **delay** of a wire.
 
@@ -231,7 +231,7 @@ So even a perfectly balanced tree gets skew because of crosstalk.
 
 ### Clock net shielding
 
-![9](9.png)
+![9](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/9.png)
 
 To stop crosstalk on the clock, the clock wires are **shielded**. Extra wires (the yellow double lines on both sides of the clock wire, usually connected to power or ground) are placed next to the clock wires. Now the neighbour of a clock wire is a quiet shield wire instead of a switching signal wire, so crosstalk on the clock is much lower. The layout is the same as the buffered clock tree but with shields added.
 
@@ -241,7 +241,7 @@ To stop crosstalk on the clock, the clock wires are **shielded**. Extra wires (t
 
 ### Setup analysis with real clocks
 
-![11](11.png)
+![11](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/11.png)
 
 In a real chip, the clock goes through buffers (1, 2, 3, 4) and wires, so the launch and capture flops do **not** get the clock at the same time.
 
@@ -289,7 +289,7 @@ Slack    = 1.15 − 1.05            = +0.10 ns   → setup met
 
 ### Hold analysis with real clocks
 
-![12](12.png)
+![12](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/12.png)
 
 Hold checking is about the data **not changing too early**. The new data launched at the clock edge should not race through the logic and reach the capture flop before it has finished capturing the old data.
 
@@ -330,7 +330,7 @@ Note: setup is checked against the **next** clock edge (`T`), but hold is checke
 
 ### Finding Δ1 and Δ2 from the layout
 
-![13](13.png)
+![13](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/13.png)
 
 This shows how to find `Δ1` and `Δ2` from the actual layout. Each one is the sum of the delays along the clock path from the clock pin to the flop. The path alternates between wire and buffer:
 
@@ -353,7 +353,7 @@ The formula at the bottom left is the same hold check as above.
 
 ### Maze routing, Lee's algorithm
 
-![14](14.png)
+![14](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/14.png)
 
 Step 5 of the flow is **Route**, which means drawing the real wires between pins. Lee's algorithm (1961) is a simple method to find the shortest path on a grid.
 
@@ -374,7 +374,7 @@ TritonRoute is a **detailed router** (an open-source one).
 
 ### Overview
 
-![18](18.png)
+![18](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/18.png)
 
 Main points:
 
@@ -385,7 +385,7 @@ Main points:
 
 ### Preprocessed route guides
 
-![19](19.png)
+![19](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/19.png)
 
 A route guide is like a rough area (a box) telling the router where a net should go. The picture shows how raw guides are cleaned up in steps:
 
@@ -404,7 +404,7 @@ Requirements of preprocessed guides:
 
 ### Inter-guide connectivity
 
-![20](20.png)
+![20](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/20.png)
 
 Two guides count as connected if:
 
@@ -415,7 +415,7 @@ Also, every unconnected pin of a standard cell must be **overlapped by a route g
 
 ### Panel routing
 
-![21](21.png)
+![21](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/21.png)
 
 The chip is split into long thin strips called **panels** on each metal layer.
 
@@ -426,7 +426,7 @@ In the picture: (a) all panels on M2 are routed in parallel, (b) then even panel
 
 ### Problem statement
 
-![22](22.png)
+![22](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/22.png)
 
 | | |
 |---|---|
@@ -436,7 +436,7 @@ In the picture: (a) all panels on M2 are routed in parallel, (b) then even panel
 
 ### Handling connectivity (access points)
 
-![23](23.png)
+![23](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/23.png)
 
 To connect things, the router uses **access points**.
 
@@ -447,7 +447,7 @@ The picture shows access points (a) to a lower layer segment, (b) to a pin shape
 
 ### Routing topology algorithm
 
-![24](24.png)
+![24](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/24.png)
 
 After the access point clusters are known, the router has to decide **which clusters to join together** with the least wire. The algorithm is:
 
@@ -471,13 +471,13 @@ In simple words:
 
 ### DRC clean (step 6)
 
-![15](15.png)
+![15](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/15.png)
 
 After routing, the dark green signal wires are on the chip. **DRC (Design Rule Check)** makes sure the layout follows the manufacturing rules. Some typical design rules apply to a pair of wires, and one of them is shown, the **wire pitch** (the distance between two parallel wires). If wires are too close the chip cannot be made reliably. A layout with no rule violations is called **DRC clean**.
 
 ### Parasitics extraction (step 7)
 
-![16](16.png)
+![16](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/16.png)
 
 Real wires are not perfect. Every wire has some **resistance (R)** and **capacitance (C)**, called parasitics. In the picture, small resistor and capacitor symbols are drawn on the wires. These values are extracted from the final layout and are then used for timing analysis (like the wire RC delays above), so the timing numbers match the real chip.
 
@@ -487,7 +487,7 @@ Real wires are not perfect. Every wire has some **resistance (R)** and **capacit
 
 ### Chip power layout
 
-![17](17.png)
+![17](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/Clock%20Tree%20synthesis/images/17.png)
 
 This image labels the parts of a chip's layout and its power network.
 
