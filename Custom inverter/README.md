@@ -73,35 +73,35 @@ The inverter design process continues. The PMOS and NMOS devices must be arrange
 
 This screenshot is part of the layout creation process. In a CMOS inverter, the PMOS connects to the positive supply and the NMOS connects to ground; their gates share the input and their drains form the output.
 
-![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/60.png)
+![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/60.jpeg)
 
 The layout work continues, including the physical shapes and connections required by the cell.
 
-![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/61.png)
+![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/61.jpeg)
 
 This step continues arranging the cell geometry. The layout must connect the transistor terminals correctly while keeping separate nets electrically isolated.
 
-![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/62.png)
+![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/62.jpeg)
 
 The physical layout is refined. Metal layers are used to connect the device terminals and provide the cell's input, output and supply connections.
 
-![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/63.png)
+![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/63.jpeg)
 
 This screenshot belongs to the layout construction and verification stage. Correct connections and process-rule spacing are important before simulation.
 
-![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/64.png)
+![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/64.jpeg)
 
 The cell layout is further checked and adjusted as needed. A layout that looks correct still needs a Design Rule Check.
 
-![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/65.png)
+![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/65.jpeg)
 
 This is another step in completing the inverter layout. The goal is to make the layout both electrically correct and compliant with the 130 nm process rules.
 
-![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/66.png)
+![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/66.jpeg)
 
 The layout verification work continues. DRC helps identify issues such as insufficient spacing or incorrect layer dimensions.
 
-![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/67.png)
+![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/67.jpeg)
 
 This screenshot continues the layout and checking sequence before the circuit is prepared for electrical simulation.
 
