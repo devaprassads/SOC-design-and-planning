@@ -163,37 +163,37 @@ The individual cells (`dfxtp`, `a22o`, `mux2`, `buf`, `clkbuf`) sit in rows alon
 
 ## 4. Sky130 Inverter Layout 
 
-### Image 18: Opening the inverter in Magic
+### Opening the inverter in Magic
 ![Synthesis Step 18](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/18.png)
 
 The `vsdstdcelldesign` repo is cloned, the `sky130A.tech` file is copied in, and `magic -T sky130A.tech sky130_inv.mag &` opens the inverter layout.
 
-### Image 19: Inverter layout
+### Inverter layout
 ![Synthesis Step 19](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/19.png)
 
 The full inverter. **VPWR** is at the top, **VGND** at the bottom, **A** is the input (the red poly gate) and **Y** is the output. The PMOS is in the N-well at the top and the NMOS is at the bottom.
 
-### Image 20: NMOS
+### NMOS
 ![Synthesis Step 20](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/20.png)
 
 The lower transistor is selected, and `what` shows **nmos**.
 
-### Image 21: PMOS
+### PMOS
 ![Synthesis Step 21](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/21.png)
 
 The upper transistor shows **pmos**. Both transistors share the same poly gate, so they get the same input A.
 
-### Image 22: Output Y
+### Output Y
 ![Synthesis Step 22](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/22.png)
 
 The output Y touches both `ndiff` and `pdiff` through `locali`. This means the drains of the PMOS and NMOS are joined to make the output.
 
-### Image 23: VPWR connection
+### VPWR connection
 ![Synthesis Step 23](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/23.png)
 
 VPWR is on `metal1` and connects to the PMOS source and also to the N-well (through `nsubdiff`).
 
-### Image 24: VGND connection
+### VGND connection
 ![Synthesis Step 24](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/24.png)
 
 VGND is on `metal1` and connects to the NMOS source and also to the P-substrate (through `psubdiff`).
