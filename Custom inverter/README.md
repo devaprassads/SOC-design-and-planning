@@ -6,7 +6,7 @@ The main aim is to understand how a standard cell is designed, tested, and repre
 
 ## Table of Contents
 
-1. [Where this fits in the flow](#1-where-this-fits-in-the-flow)
+1. [Full Flow](#1-Full-Flow)
 2. [Tools and basic terms](#2-tools-and-basic-terms)
 3. [Step-by-step work](#3-step-by-step-work)
 4. [Understanding the timing calculations](#4-understanding-the-timing-calculations)
@@ -15,7 +15,7 @@ The main aim is to understand how a standard cell is designed, tested, and repre
 
 ---
 
-## 1. Where this fits in the flow
+## 1. Full Flow
 
 ```text
 CMOS schematic / transistor design
