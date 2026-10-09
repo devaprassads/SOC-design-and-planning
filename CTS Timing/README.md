@@ -123,5 +123,3 @@ Clock-tree synthesis constructs the clock distribution network and inserts clock
 - Pre-CTS timing reports are reviewed before clock-tree synthesis.
 - CTS builds the clock distribution network using inserted clock buffers.
 - Post-CTS timing checks are required to assess setup/hold slack after the clock network has been added.
-
-The screenshots document the flow and its reports. Numeric setup slack, hold slack, skew, or buffer-count values should be quoted only when they are clearly readable in the corresponding report output.
