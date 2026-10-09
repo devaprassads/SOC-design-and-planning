@@ -173,4 +173,3 @@ The reports show mixed results across separate checks/runs, including a hold vio
 - The CTS summaries show **10.03 slack (MET)**, while separate minimum-delay reports include both **−0.0228 (VIOLATED)** and **0.25 (MET)**; these belong to different checks/runs and are not treated as one result.
 - The PDN log reports successful power-grid generation, while also noting that some source locations are moved to the nearest power stripe.
 - The routing log reports completion, followed by RC extraction, SPEF generation, and a static timing analysis run.
-- A final post-route slack value is not legible in the supplied screenshots, so it is not claimed here.
