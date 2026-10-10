@@ -39,7 +39,7 @@ Floorplanning defines the core area, while placement assigns locations to standa
 
 Clock Tree Synthesis distributes the clock signal to sequential cells. Timing analysis checks whether the design meets its timing requirements.
 
-- [CTS Timing](./CTS%20Timing/README.md) — Notes on clock timing and timing analysis.
+- [CTS Timing](./CTS%20Timing/README.md) — CTS and Timing Analysis Flow
 - [Clock Tree Synthesis](./Clock%20Tree%20synthesis/README.md) — Notes and screenshots from the CTS stage.
 - [CTS Results](./results/cts/) — Output files generated after CTS.
 - [Timing Reports](./reports/synthesis/) — Reports containing timing information.
@@ -51,7 +51,6 @@ Routing connects the placed cells through metal wires.
 - [Routing](./Routing/README.md) — Routing flow and screenshots.
 - [Routing Results](./results/routing/) — Routed design files and extracted parasitics.
 - [Routing Report](./reports/routing/18-tritonRoute.klayout.xml) — Routing report data.
-- [Full-Flow Screenshots](./full%20flow/) — Screenshots from different stages of the design flow.
 
 ## What I Learned
 
