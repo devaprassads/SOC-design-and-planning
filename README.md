@@ -4,8 +4,6 @@
 
 This project follows a digital design from Verilog RTL toward a physical chip layout. I worked with the PicoRV32A processor design and the SkyWater SKY130 platform. The repository contains notes, screenshots, configuration files, reports, and results from different stages.
 
-The main documentation is organized into five topic files. The files follow the requested order; related theory is included with the stage where it is most useful.
-
 ## Documentation
 
 1. **[Synthesis](./1_Synthesis.md)** — RTL, standard-cell libraries, synthesis, netlists, and synthesis reports.
@@ -14,7 +12,7 @@ The main documentation is organized into five topic files. The files follow the 
 4. **[CTS and Timing](./4_CTS_Timing.md)** — clock distribution, latency, skew, setup and hold checks, and slack.
 5. **[Routing and Sign-off Checks](./5_Routing_Signoff.md)** — physical interconnect, parasitic extraction, routing checks, and post-route timing.
 
-**Note about technical flow:** The documentation follows the requested file order. In an actual implementation flow, custom-cell design and characterization generally need to be done before synthesis if that cell is intended for use by synthesis. CMOS fabrication concepts are background theory for understanding the devices and layout.
+Custom-cell design normally comes before synthesis if the cell is intended to be used in the synthesis library. CMOS fabrication concepts are included as background for understanding the devices and layout.
 
 ## Project Sources and Existing Stage Folders
 
