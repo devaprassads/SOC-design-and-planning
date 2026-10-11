@@ -57,8 +57,6 @@ The screenshots below follow the original workflow. Each image opens from the co
 
 ![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/56.png)
 
-This screenshot records the start of this part of the workflow. The aim is to create a custom inverter cell rather than use an already designed cell.
-
 ![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/57.png)
 
 This continues the setup for the custom-cell design. The required process and design environment are used for the layout work.
@@ -74,9 +72,6 @@ The inverter design process continues. The PMOS and NMOS devices must be arrange
 This screenshot is part of the layout creation process. In a CMOS inverter, the PMOS connects to the positive supply and the NMOS connects to ground; their gates share the input and their drains form the output.
 
 ![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/60.jpeg)
-
-The layout work continues, including the physical shapes and connections required by the cell.
-
 ![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/61.jpeg)
 
 This step continues arranging the cell geometry. The layout must connect the transistor terminals correctly while keeping separate nets electrically isolated.
@@ -192,10 +187,6 @@ This screenshot shows a later stage in the custom-cell workflow. The generated f
 ![Custom inverter design screenshot](https://raw.githubusercontent.com/devaprassads/SOC-design-and-planning/main/full%20flow/88.png)
 
 This is the last screenshot included for this topic. It marks the end of the documented custom-cell design and characterization sequence.
-
-> **Note:** The screenshot captions above explain the purpose of each stage in the overall flow. The original images are linked directly from the repository; exact command outputs or numerical results should only be added where they are visible in the screenshot.
-
----
 
 ## 4. Understanding the timing calculations
 
